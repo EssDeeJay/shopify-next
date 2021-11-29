@@ -29,10 +29,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const product = await getProduct(params.product)
+  const client = true
 
   return {
     props: {
-      product
+      product,
+      client
     }
   }
 }
